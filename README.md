@@ -13,14 +13,17 @@ The simplification this project makes is to collect and report the samples from 
 
 ## Examples of Basic Use
 
-from ad-interface import AD
+```python
+from ad_interface import AD
+from ad_fake import AdFake
 
-ad = AD
-samples = ad.get-samples()
+actual_ad = AdFake()
+ad = AD(actual_ad, 8)
+samples = ad.get_samples()
 
 for sample in samples:
     print(sample)
-
+```
 ## Getting more info
 
 Source code in this repository. Maybe use Sphinx.
